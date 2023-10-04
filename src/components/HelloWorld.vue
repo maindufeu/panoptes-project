@@ -67,7 +67,7 @@
     <p v-if="points.length > 0">Coordenadas: {{ polygonPoints }}</p>
     <p></p>
   </div>
-  <button class="mt-6 mb-6" @click="sendCoordinates">Enviar polígono</button>
+  <button v-if="selectedItem !== 'c'" class="mt-6 mb-6" @click="sendCoordinates">Enviar polígono</button>
   <div class="bar-chart mx-auto w-48" v-if="videoSource !== ''">
     <div
       v-for="(value, label) in barChartData"
@@ -83,18 +83,23 @@
   </div>
   <div class="videos-wrapper" v-if="selectedItem == 'c'">
   <div>
-    <img :src="imageURL + '?' + timestamp" alt="Cámara en vivo" width="640">
+    <!-- <img :src="imageURL + '?' + timestamp" alt="Cámara en vivo" width="640"> -->
     <!-- <img :src="imageURL"> -->
-    <button v-if="imageResult == ''" class="mt-6 mb-6" @click="updateImage">segmentar imagen</button>
-    <button v-if="intervalId !== null" class="mt-6 mb-6" @click="stopImageUpdate">Parar streaming</button>
+    <!-- <button v-if="imageResult == ''" class="mt-6 mb-6" @click="updateImage">Iniciar streaming</button> -->
+    <!-- <button v-if="intervalId !== null" class="mt-6 mb-6" @click="stopImageUpdate">Parar streaming</button> -->
+  </div>
+  <div class="container py-10 px-10 mx-0 min-w-full flex flex-col items-center" v-if="selectedItem == 'c'">
+    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" @click="updateImage">Iniciar streaming</button>
   </div>
   <div v-if="imageResult !== ''">
+    
     <img v-if="selectedItem == 'c'"  :src="imageResult" alt="Resultado de cámara" width="640">
   </div>
 </div>
 <div v-if="selectedItem == 'c'">
-  <textarea v-model="question"></textarea>
-  <button @click="queryImage">Send</button>
+  <p>aquí puedes poner tu pregunta sobre lo que se ve en la cámara</p>
+  <textarea class="peer h-1/2 min-h-12 w-full resize-none rounded-[7px]" v-model="question"></textarea>
+  <button class="ml-6" @click="queryImage">Preguntar a Vilt</button>
   <p v-if="viltResponse">{{ viltResponse }}</p>
 </div>
 </template>
