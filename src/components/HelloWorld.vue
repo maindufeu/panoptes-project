@@ -164,12 +164,12 @@ export default {
         this.timestamp = Date.now();  // Cambiar el timestamp fuerza a la imagen a recargarse
         let apiUrl = 'https://53e4-34-236-18-197.ngrok-free.app/segment'
         if (this.switchValue) {
-            this.imageURL = 'http://47.181.86.62:8082/jpg/image.jpg'; // Cambiar por la nueva URL deseada
+            this.imageURL = 'https://47.181.86.62:8082/jpg/image.jpg'; // Cambiar por la nueva URL deseada
             //this.imageURL = 'http://47.181.86.62:8082/jpg/image.jpg'; // Cambiar por la nueva URL deseada
             apiUrl = 'https://53e4-34-236-18-197.ngrok-free.app/hpe'
             console.log(this.imageURL, apiUrl)
         } else {
-            this.imageURL = 'http://67.43.220.114/jpg/image.jpg'; // Colocar la URL original o una diferente si deseas
+            this.imageURL = 'https://67.43.220.114/jpg/image.jpg'; // Colocar la URL original o una diferente si deseas
             apiUrl = 'https://53e4-34-236-18-197.ngrok-free.app/segment'
         }
 
