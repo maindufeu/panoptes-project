@@ -23,7 +23,7 @@
   </div>
   
   <div class="videos-wrapper" v-if="selectedItem !== 'c'">
-    <h3>Dibuja un polígono sobre la imagen</h3>
+    <p>Instrucciones: 1. selecciona los elementos que quieres contar. \n 2. Selecciona en el menú desplegable el video a usar \n 3. Dibuja un polígono sobre la imagen y da clic en "Enviar polígono" el proceso de video tarda unos 10 a 15 segundos \n También es posible hacer inferencia en tiempo real de video cámaras seleccionando la opción cámara </p>
     <div
       class="video-container"
       @click="addPoint"
