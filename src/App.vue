@@ -1,8 +1,11 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import { Analytics } from '@vercel/analytics/react';
+
 </script>
 
 <template>
+  <Analytics />
   <div>
     <a href="https://github.com/AI-ML-Lab" target="_blank">
       <img src="https://github.com/AI-ML-Lab/resources/blob/main/images/m_dimensiones.gif?raw=true" class="logo" alt="Dimensiones" />
