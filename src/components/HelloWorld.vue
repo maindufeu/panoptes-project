@@ -21,9 +21,8 @@
     </select>
     <input type="checkbox" v-model="switchValue">
   </div>
-  
+  <pre>{{instruct}}</pre>
   <div class="videos-wrapper" v-if="selectedItem !== 'c'">
-    <pre>{{instruct}}</pre>
     <div
       class="video-container"
       @click="addPoint"
