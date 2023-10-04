@@ -21,7 +21,9 @@
     </select>
     <input type="checkbox" v-model="switchValue">
   </div>
+  
   <div class="videos-wrapper" v-if="selectedItem !== 'c'">
+    <h3>Dibuja un polígono sobre la imagen</h3>
     <div
       class="video-container"
       @click="addPoint"
