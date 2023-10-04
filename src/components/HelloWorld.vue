@@ -107,7 +107,7 @@ export default {
       checkboxOptions: ['Manzana', 'Persona', 'Auto', 'Camioneta', 'Moto', 'Botella'],
       checkedOptions: [],
       points: [],
-      instruct: 'Instrucciones: 1. selecciona los elementos que quieres contar. \n 2. Selecciona en el menú desplegable el video a usar \n 3. Dibuja un polígono sobre la imagen y da clic en "Enviar polígono" el proceso de video tarda unos 10 a 15 segundos \n También es posible hacer inferencia en tiempo real de video cámaras seleccionando la opción cámara',
+      instruct: 'Instrucciones: 1. selecciona los elementos que quieres contar. \n 2. Selecciona en el menú desplegable el video a usar \n 3. Dibuja un polígono sobre la imagen y da clic en "Enviar polígono" el proceso de video tarda unos 10 a 15 segundos \n  Para borrar el polígono actual haz doble clic en un punto del video. También es posible hacer inferencia en tiempo real de video cámaras seleccionando la opción cámara \n seleccionando la opción cámara puedes hacerle preguntas a Vilt sobre los elementos en la imagen Ejemplo: cuantos autos hay en la imagen?',
       videoOriginal: '',
       imageURL: '',
       imageResult:'',
